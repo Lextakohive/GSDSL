@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript"></script>
+    <title>GSDL</title>
+	<style type="text/css">
+	h1{
+		text-align: center;
+		margin-bottom: 0px;
+	}
+	body{
+		background-color: rgb(220,220,220);
+	}
+	video{
+		padding-left: 43%;
+	}
+	footer {
+  		position: fixed;
+  		left: 0;
+  		bottom: 0;
+  		width: 100%;
+  		color: black;
+  		text-align: center;
+	}
+	button{
+		margin-left: 43%;
+		font-size: 15px;
+	}
+	#Bcon{
+	margin-left: 8%; 
+	}
+	#jsons{
+		margin-left: 16%;
+		font-weight: 600;
+	}
+</style>
+
+</head>
+
+
+<body>
+	<h1>Gesture recognition system for decentralised sign language</h1>
+  <div>
+  <script src="dist/build.js"></script>
+  </div>
+  <div id="Bcon">
+  	<p>
+  <button style="margin-left: 0%;"  id="save_button">Save to model Browser Storage</button>
+  <button  style="margin-left: 0%;" id="load_button"> Load model from Browser Storage </button>
+  <button  style="margin-left: 0%;" id="clear_button"> Delete model from Browser Storage </button>
+  <button  style="margin-left: 0%;" id="download_button"> Download Model JSON file </button>
+  <button  style="margin-left: 0%;" id="downloadLabel_button"> Download labels JSON file </button>
+</p>
+<p id="jsons">
+
+  Load model from JSON file:  <input   style="margin-left: 0%;" id="loadJSON_button" type='file' accept='.json'>
+  Load labels from JSON file: <input   style="margin-left: 0%;" id="loadLabel_button" type='file' accept='.json' >
+</p>
+
+
+	</div>
+	<footer>
+		<p>&copy; 2020 GSDSL<p>
+	</footer>
+</body>
+</html>
