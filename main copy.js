@@ -60,20 +60,11 @@ class Main {
     
     
     if (flag==true) {
-    // Create training buttons and info texts  
-        const holder = document.createElement('div');
-        holder.style.display='flex';
-        holder.style.width='60%';
-        holder.style.height='auto';
-        holder.style.justifyContent='space-around';
-        holder.style.flexWrap='wrap';
-        holder.style.marginLeft='33%';
-        document.body.appendChild(holder);
-          
+    // Create training buttons and info texts    
     	for (let i = 0; i < NUM_CLASSES; i++) {
       		  const div = document.createElement('div');
-      		  holder.appendChild(div);
-            div.style.paddingTop = '2%';
+      		  document.body.appendChild(div);
+      		  div.style.marginBottom = '10px';
 
 		      // Create training button
 		      const button = document.createElement('button')
@@ -228,25 +219,15 @@ const saveFile = (name, data) => {
       	console.log('logged from file reader loop');
         var res = fr.result;
         stringer=JSON.parse(res);
-        const holder = document.createElement('div');
-        holder.style.display='flex';
-        holder.style.width='60%';
-        holder.style.height='auto';
-        holder.style.justifyContent='space-around';
-        holder.style.flexWrap='wrap';
-        holder.style.marginLeft='33%';
-        holder.style.paddingTop='1%';
-        document.body.appendChild(holder);
         for (let i = 0; i < stringer.length ; i++) {
 		      const div = document.createElement('div');
-		      holder.appendChild(div);
+		      document.body.appendChild(div);
 		      div.style.marginBottom = '10px';
 		  	  // Create training button
 		      const button = document.createElement('button')
 		      var label = stringer[i];
 		      var natural=i;
-          button.innerText = natural+1 + " " + label +" Gesture" ;
-          button.className="btn btn-primary";
+		      button.innerText = natural+1 + " " + label +" Gesture" ;
 		      div.appendChild(button);
 		      button.addEventListener('mousedown', () => this.training = i);
 		      button.addEventListener('mouseup', () => this.training = -1);

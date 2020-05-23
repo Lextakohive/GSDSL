@@ -24,10 +24,8 @@
 		color: black;
 	}
 	video{
-		position: fixed;
-		scale: 125%;
-		padding-top: 1.2% ;
-		left: 9%;
+		position: relative;
+		left: 42%;
 	
 	}
 	footer {
@@ -40,20 +38,17 @@
   		background-color: white;
 	}
 	button{
+		margin-left: 43%;
 		font-size: 10px;
-		padding: 2px;
 	}
 	#Bcon{
 	padding: 10px;
-	background-color: rgb(66,104,214);
-	text-align: center; 
-	}
-	#file{
-		text-align: center;
-		color: white;
+	background-color: rgb(66,104,214); 
 	}
 	#jsons{
-		display: none;
+		margin-left: 16%;
+		font-weight: 600;
+		color: white;
 	}
 </style>
 
@@ -64,23 +59,21 @@
 	<header>
 	<h1>GESTURE RECOGNITION SYSTEM FOR DECENTRALISED SIGN LANGUAGE</h1>
 	</header>
+  <div>
+  <script src="dist/build.js"></script>
+  </div>
   <div id="Bcon">
-  	<p>
-  <button  style="margin: 2px;"  class="btn btn-primary" id="save_button">Save to model Browser Storage</button>
-  <button  style="margin: 2px;" class="btn btn-primary" id="load_button"> Load model from Browser Storage </button>
-  <button  style="margin: 2px;" class="btn btn-primary" id="clear_button"> Delete model from Browser Storage </button>
-  <button  style="margin: 2px;" class="btn btn-primary" id="downloadLabel_button"> Download labels JSON file </button>
-  <button  style="margin: 2px;" class="btn btn-primary" id="download_button"> Download Model JSON file </button>
+  	<p style="margin-left: 8%">
+  <button  style="margin-left: 0%;"  class="btn btn-primary" id="save_button">Save to model Browser Storage</button>
+  <button  style="margin-left: 0%;" class="btn btn-primary" id="load_button"> Load model from Browser Storage </button>
+  <button  style="margin-left: 0%;" class="btn btn-primary" id="clear_button"> Delete model from Browser Storage </button>
+  <button  style="margin-left: 0%;" class="btn btn-primary" id="download_button"> Download Model JSON file </button>
+  <button  style="margin-left: 0%;" class="btn btn-primary" id="downloadLabel_button"> Download labels JSON file </button>
 </p>
-<div="file">
-	<button class="btn btn-primary" id="upl" onclick="document.getElementById('loadLabel_button').click();">Upload Labels</button>
-	<button class="btn btn-primary" id="upm" onclick="document.getElementById('loadJSON_button').click();">Upload Model</button>
-</div>
-
-<div id="jsons">
+<p id="jsons">
 	Load labels from JSON file: <input   style="margin-left: 0%;" id="loadLabel_button" type='file' accept='.json' >
   	Load model from JSON file:  <input   style="margin-left: 0%;" id="loadJSON_button" type='file' accept='.json'>
-</div>
+</p>
 
 
 	</div>
@@ -89,8 +82,5 @@
 		<h5 style="padding-top: 15px;">&copy; 2020 GSDSL </h5>
 			</div>
 	</footer>
-	<div>
-		<script src="dist/build.js"></script>
-		</div>
 </body>
 </html>
