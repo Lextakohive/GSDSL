@@ -1,0 +1,1 @@
+web: budo main.js:dist/build.js
