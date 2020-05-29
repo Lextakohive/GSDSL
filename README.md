@@ -1,5 +1,4 @@
 # GSDSL
-This is a small boilerplate project that demonstrates how to use [tensorflow.js](https://github.com/tensorflow/tfjs-models) to create projects like [Teachable Machine](https://teachablemachine.withgoogle.com/). The code shows how you can create a KNN classifier that can be trained live in the browser on a webcam image. It is intentionally kept very simple so it can provide a starting point for new projects.
 
 Behind the scenes, the image from the webcam is being processed by an activation of [MobileNet](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet). This network is trained to recognize all sorts of classes from the imagenet dataset, and is optimized to be really small, making it useable in the browser. Instead of reading the prediction values from the MobileNet network, we instead take the second to last layer in the neural network and feed it into a KNN ([k-nearest neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)) classifier that allows you to train your own classes. 
 
