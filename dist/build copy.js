@@ -80,42 +80,30 @@ var Main = function () {
 
     // Create training buttons and info texts    
 
-    if (flag==true) {
-      // Create training buttons and info texts  
-          const holder = document.createElement('div');
-          holder.style.display='flex';
-          holder.style.width='60%';
-          holder.style.height='auto';
-          holder.style.justifyContent='space-around';
-          holder.style.flexWrap='wrap';
-          holder.style.marginLeft='33%';
-          document.body.appendChild(holder);
-            
-        for (let i = 0; i < NUM_CLASSES; i++) {
-              const div = document.createElement('div');
-              holder.appendChild(div);
-              div.style.paddingTop = '2%';
-  
-            // Create training button
-            const button = document.createElement('button')
-            var label = prompt("Please enter the name of the gesture", "Name of the gesture");
-            name_array.push(label);
-            var natural=i;
-            button.innerText = natural+1 + " " + label +" Gesture" ;
-            button.className="btn btn-primary";
-            div.appendChild(button);
-  
-        // Listen for mouse events when clicking the button
-            button.addEventListener('mousedown', () => this.training = i);
-            button.addEventListener('mouseup', () => this.training = -1);
-  
-            // Create info text
-            const infoText = document.createElement('span')
-            infoText.innerText = " Enter Examples";
-            div.appendChild(infoText);
-            this.infoTexts.push(infoText);
-          }
-      }
+    var _loop = function _loop(i) {
+      var div = document.createElement('div');
+      document.body.appendChild(div);
+      div.style.marginBottom = '10px';
+
+      // Create training button
+      var button = document.createElement('button');
+      button.innerText = "Train " + i;
+      div.appendChild(button);
+
+      // Listen for mouse events when clicking the button
+      button.addEventListener('mousedown', function () {
+        return _this.training = i;
+      });
+      button.addEventListener('mouseup', function () {
+        return _this.training = -1;
+      });
+
+      // Create info text
+      var infoText = document.createElement('span');
+      infoText.innerText = " No examples added";
+      div.appendChild(infoText);
+      _this.infoTexts.push(infoText);
+    };
 
     for (var i = 0; i < NUM_CLASSES; i++) {
       _loop(i);
