@@ -117,9 +117,7 @@ var Main = function () {
           }
       }
 
-    for (var i = 0; i < NUM_CLASSES; i++) {
-      _loop(i);
-    }
+   
     
     // Setup webcam
     navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
