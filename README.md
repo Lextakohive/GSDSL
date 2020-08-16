@@ -4,7 +4,7 @@ Behind the scenes, the image from the webcam is being processed by an activation
 
 The benefit of using the MobileNet model instead of feeding the pixel values directly into the KNN classifier is that we use the high level abstractions that the neural network has learned in order to recognize the Imagenet classes. This allows us with very few samples to train a classifier that can recognize things like smiles vs frown, or small movements in your body. This technique is called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
 
-Tensorflow has a built in model for doing this. It's called the [KNN Classifier](https://github.com/tensorflow/tfjs-models/tree/master/knn-classifier), and this boilerplate code shows how to easily use it.
+Tensorflow has a built in model for doing this. It's called the [KNN Classifier](https://github.com/tensorflow/tfjs-models/tree/master/knn-classifier).
 
 ## Use code
 To use the code, first install the Javascript dependencies by running  
@@ -41,4 +41,3 @@ A quick overview of the most important function calls we use from the tensorflow
 
 - `.infer(image, endpoint)`: Get an intermediate activation or logit as Tensorflow.js tensors. Takes an image and the optional endpoint to predict through.
 
-See the full implementation [here](https://github.com/tensorflow/tfjs-models/blob/master/mobilenet/src/index.ts)
